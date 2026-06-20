@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  /* StrikeFlow dark terminal theme */
+  --color-background: hsl(222, 47%, 7%);
+  --color-foreground: hsl(210, 40%, 96%);
+
+  --color-card: hsl(222, 47%, 10%);
+  --color-card-foreground: hsl(210, 40%, 96%);
+
+  --color-popover: hsl(222, 47%, 10%);
+  --color-popover-foreground: hsl(210, 40%, 96%);
+
+  --color-primary: hsl(142, 76%, 45%);
+  --color-primary-foreground: hsl(222, 47%, 7%);
+
+  --color-secondary: hsl(217, 32%, 17%);
+  --color-secondary-foreground: hsl(210, 40%, 96%);
+
+  --color-muted: hsl(217, 32%, 17%);
+  --color-muted-foreground: hsl(215, 20%, 55%);
+
+  --color-accent: hsl(217, 32%, 20%);
+  --color-accent-foreground: hsl(210, 40%, 96%);
+
+  --color-destructive: hsl(0, 84%, 60%);
+  --color-destructive-foreground: hsl(210, 40%, 98%);
+
+  --color-border: hsl(217, 32%, 20%);
+  --color-input: hsl(217, 32%, 20%);
+  --color-ring: hsl(142, 76%, 45%);
+
+  --color-profit: #22c55e;
+  --color-loss: #ef4444;
+
+  --radius: 0.5rem;
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
+
+  --font-sans: system-ui, -apple-system, sans-serif;
+  --font-mono: ui-monospace, "Cascadia Code", monospace;
+}
+
+/* Base styles */
+*, *::before, *::after {
+  border-color: var(--color-border);
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  font-feature-settings: "rlig" 1, "calt" 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: hsl(222, 47%, 10%); }
+::-webkit-scrollbar-thumb { background: hsl(217, 32%, 30%); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: hsl(217, 32%, 40%); }
+
+/* Recharts tooltip */
+.recharts-tooltip-wrapper { z-index: 1000; }
+
+/* Tabular numbers */
+.tabular { font-variant-numeric: tabular-nums; font-feature-settings: "tnum"; }

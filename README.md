@@ -1,11 +1,10 @@
-# StrikeFlow Frontend
+# StrikeFlow 
 
 Next.js 15 frontend for the StrikeFlow Options Analytics Platform.
 
 ## Setup
 
 ```bash
-cd frontend
 npm install
 npm run dev
 ```
